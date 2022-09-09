@@ -6,11 +6,6 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+alt+down",
-    "command": "-editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "ctrl+k e",
     "command": "workbench.explorer.fileView.focus"
   },
@@ -24,26 +19,12 @@
     "when": "terminalFocus"
   },
   {
-    "command": "vscode-neovim.compositeEscape1",
-    "key": "j",
-    "when": "neovim.mode == insert && editorTextFocus",
-    "args": "j"
-  },
-  {
     "key": "ctrl+shift+,",
     "command": "workbench.action.navigateBack"
   },
   {
-    "key": "ctrl+alt+-",
-    "command": "-workbench.action.navigateBack"
-  },
-  {
     "key": "ctrl+shift+.",
     "command": "workbench.action.navigateForward"
-  },
-  {
-    "key": "ctrl+shift+-",
-    "command": "-workbench.action.navigateForward"
   },
   {
     "key": "ctrl+j",
@@ -120,11 +101,6 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+[",
-    "command": "-editor.fold",
-    "when": "editorTextFocus && foldingEnabled"
-  },
-  {
     "mac": "shift+cmd+[",
     "key": "shift+ctrl+[",
     "command": "workbench.action.previousEditor",
@@ -139,11 +115,6 @@
   {
     "key": "ctrl+alt+s",
     "command": "workbench.action.files.saveFiles"
-  },
-  {
-    "key": "ctrl+k ctrl+c",
-    "command": "-editor.action.addCommentLine",
-    "when": "editorTextFocus && !editorReadonly"
   },
   {
     "key": "ctrl+alt+x",
@@ -162,21 +133,12 @@
     "command": "workbench.action.openRecent"
   },
   {
-    "key": "ctrl+r",
-    "command": "-workbench.action.openRecent"
-  },
-  {
     "key": "alt+d",
     "command": "editor.action.insertSnippet",
     "when": "editorFocus",
     "args": {
       "snippet": "debugger;"
     }
-  },
-  {
-    "key": "ctrl+d",
-    "command": "-editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
   },
   {
     "key": "ctrl+d",
@@ -190,10 +152,6 @@
   {
     "key": "ctrl+alt+backspace",
     "command": "bracketeer.removeBrackets"
-  },
-  {
-    "key": "ctrl+shift+alt+i",
-    "command": "-bracketeer.removeBrackets"
   },
   {
     "key": "shift+ctrl+enter",
@@ -215,28 +173,13 @@
     "when": "inSearchEditor && searchInputBoxFocus"
   },
   {
-    "key": "alt+w",
-    "command": "-toggleSearchEditorWholeWord",
-    "when": "inSearchEditor && searchInputBoxFocus"
-  },
-  {
     "key": "shift+alt+=",
     "command": "workbench.action.terminal.toggleFindWholeWord",
     "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "alt+w",
-    "command": "-workbench.action.terminal.toggleFindWholeWord",
-    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
     "key": "shift+alt+=",
     "command": "toggleFindWholeWord",
-    "when": "editorFocus"
-  },
-  {
-    "key": "alt+w",
-    "command": "-toggleFindWholeWord",
     "when": "editorFocus"
   },
   {
@@ -268,11 +211,6 @@
     "when": "zardoyExperiments.renameVariablePartsOpened"
   },
   {
-    "key": "ctrl+l",
-    "command": "-notebook.centerActiveCell",
-    "when": "notebookEditorFocused"
-  },
-  {
     "key": "ctrl+alt+p",
     "command": "zardoyExperiments.renameVariableParts"
   },
@@ -287,18 +225,8 @@
     "when": "isInDiffEditor"
   },
   {
-    "key": "ctrl+o",
-    "command": "-workbench.action.files.openLocalFile",
-    "when": "remoteFileDialogVisible"
-  },
-  {
     "key": "shift+alt+8",
     "command": "extension.toggle",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+c",
-    "command": "-extension.toggle",
     "when": "editorTextFocus"
   },
   {
@@ -315,68 +243,24 @@
   },
   {
     "key": "ctrl+; c",
-    "command": "-jupyter.changeCellToCode",
-    "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
-  },
-  {
-    "key": "ctrl+; c",
-    "command": "-testing.runAtCursor",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+; c",
     "command": "git.commit"
-  },
-  {
-    "key": "ctrl+; m",
-    "command": "-jupyter.changeCellToMarkdown",
-    "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
   },
   {
     "key": "ctrl+; m",
     "command": "git.commitMessageAccept"
   },
   {
-    "key": "ctrl+; u",
-    "command": "-jupyter.moveCellsUp",
-    "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
-  },
-  {
     "key": "ctrl+; h",
     "command": "git.push"
-  },
-  {
-    "key": "ctrl+; l",
-    "command": "-testing.reRunLastRun"
   },
   {
     "key": "ctrl+; ;",
     "command": "workbench.action.openSettingsJson"
   },
   {
-    "key": "alt+up",
-    "command": "-editor.action.smartSelect.expand",
-    "when": "editorTextFocus && resourceExtname =~ /^(\\.js|\\.jsx|\\.cjs|\\.mjs|\\.ts|\\.tsx|\\.cts|\\.mts|\\.vue)$/"
-  },
-  {
-    "key": "alt+down",
-    "command": "-editor.action.smartSelect.shrink",
-    "when": "editorTextFocus && resourceExtname =~ /^(\\.js|\\.jsx|\\.cjs|\\.mjs|\\.ts|\\.tsx|\\.cts|\\.mts|\\.vue)$/"
-  },
-  {
     "key": "ctrl+k j",
     "command": "filesExplorer.findInFolder",
     "when": "explorerViewletVisible"
-  },
-  {
-    "key": "shift+alt+f",
-    "command": "-filesExplorer.findInFolder",
-    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "-zardoyExperiments.renameVariablePartsAcceptReplace",
-    "when": "zardoyExperiments.renameVariablePartsOpened"
   },
   {
     "key": "ctrl+; n",
@@ -389,11 +273,6 @@
   {
     "key": "ctrl+alt+o",
     "command": "zardoyExperiments.selectOutlineItem"
-  },
-  {
-    "key": "ctrl+shift+2",
-    "command": "-workbench.action.terminal.sendSequence",
-    "when": "terminalFocus"
   },
   {
     "key": "ctrl+shift+2",
@@ -454,10 +333,6 @@
   },
   {
     "key": "ctrl+shift+alt+h",
-    "command": "-bracketeer.selectBracketContent"
-  },
-  {
-    "key": "ctrl+shift+alt+h",
     "command": "editor.action.selectToBracket"
   },
   {
@@ -478,10 +353,6 @@
   },
   {
     "key": "ctrl+shift+f",
-    "command": "-workbench.action.findInFiles"
-  },
-  {
-    "key": "ctrl+shift+f",
     "command": "workbench.view.search.focus"
   },
   {
@@ -490,18 +361,8 @@
     "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
   },
   {
-    "key": "ctrl+down",
-    "command": "-search.focus.nextInputBox",
-    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
-  },
-  {
     "key": "alt+up ctrl",
     "command": "search.focus.previousInputBox",
-    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
-  },
-  {
-    "key": "ctrl+up",
-    "command": "-search.focus.previousInputBox",
     "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
   },
   {
@@ -510,15 +371,6 @@
   },
   {
     "key": "ctrl+k ctrl+b",
-    "command": "-editor.action.setSelectionAnchor",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+k ctrl+b",
     "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "-workbench.action.toggleSidebarVisibility"
   }
 ]
