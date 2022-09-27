@@ -13,4 +13,6 @@ Section "InputClass"
 EndSection
 ```
 
+* The layout is switched by pressing right alt 
+
 
