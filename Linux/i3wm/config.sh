@@ -4,19 +4,78 @@
 
 set $mod Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-#font pango:monospace 12
+#Font for window titles.
+font pango:Hack Nerd Font Regular 14
+#Colors
+set $back               #282C34
+set $primary            #ABB2BF
+set $secondary          #0FE0C9
+set $black              #282A2E
+set $grey               #3E4452
+set $white              #C5C8C6
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 12
+# class                 border   backgr.  text    indicator child_border
+client.focused          #3E4452  #3E4452  $white  #2e9ef4   #3E4452
+client.focused_inactive $back    $back    $white  #484e50   $back
+client.unfocused        $back    $back    $grey   #292d2e   $back
+client.urgent           $back    #900000  $white  #900000   #900000
+client.placeholder      $back    #0c0c0c  $white  #000000   #0c0c0c
+client.background       $back
+
 # thin borders
 hide_edge_borders both
 # show window title bars (not officially supported with i3gaps)
 default_border pixel 1
 # layout
 workspace_layout default
+
+# i3-gaps stuff
+for_window [class=".*"] border pixel 0
+# gaps inner 10
+# gaps outer 0
+smart_borders on
+new_window none
+
+bindsym $mod+g exec ~/dotfiles/scripts/toggle_gaps.sh
+#edit gaps mode
+#########################################################################
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+##########################################################################
+
 
 # Start XDG autostart .desktop files using dex. See also
 exec --no-startup-id dex-autostart --autostart --environment i3
@@ -89,18 +148,22 @@ bar {
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
-# keybinding in fancy rofi (automated):
-bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint-2
-
 # start a terminal
 bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
-
+#######################################
+# rofi
+#######################################
+# start rofi (window switcher)
+bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window
 # A more modern dmenu replacement is rofi:
 bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+# keybinding in fancy rofi (automated):
+bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint-2
 
+####################################################
 # Backlight control
 bindsym XF86MonBrightnessUp exec brightnessctl set +10% && notify-send "Brightness - $(brightnessctl | cut -d '.' -f 1)%"
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && notify-send "Brightness - $(brightnessctl get / brightnessctl max)%"
