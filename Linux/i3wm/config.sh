@@ -3,6 +3,16 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 #Font for window titles.
 font pango:Hack Nerd Font Regular 14
@@ -24,19 +34,15 @@ client.background       $back
 
 # thin borders
 hide_edge_borders both
-# show window title bars (not officially supported with i3gaps)
-default_border pixel 1
 # layout
 workspace_layout default
 
 # i3-gaps stuff
-for_window [class=".*"] border pixel 0
-# gaps inner 10
-# gaps outer 0
+for_window [class=".*"] border pixel 2
+workspace $ws3 gaps inner 10
 smart_borders on
 new_window none
 
-bindsym $mod+g exec ~/dotfiles/scripts/toggle_gaps.sh
 #edit gaps mode
 #########################################################################
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -161,7 +167,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window
 # A more modern dmenu replacement is rofi:
 bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # keybinding in fancy rofi (automated):
-bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint-2
+bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint
 
 ####################################################
 # Backlight control
@@ -218,18 +224,6 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
