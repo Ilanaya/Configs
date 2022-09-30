@@ -16,5 +16,5 @@ else
     rm $tmp_file
     i3-msg restart
     sleep 0.5
-    picom --daemon --config ~/.config/i3/picom.conf
+    picom --daemon --config ~/.config/picom.conf
 fi

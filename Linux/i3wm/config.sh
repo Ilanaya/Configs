@@ -167,7 +167,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window
 # A more modern dmenu replacement is rofi:
 bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # keybinding in fancy rofi (automated):
-bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint
+bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint.sh
 
 ####################################################
 # Backlight control
