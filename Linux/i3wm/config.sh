@@ -34,8 +34,6 @@ client.background       $back
 
 # thin borders
 hide_edge_borders both
-# layout
-workspace_layout default
 
 # i3-gaps stuff
 for_window [class=".*"] border pixel 2
@@ -280,3 +278,7 @@ assign [class="TelegramDesktop"] $ws5
 exec --no-startup-id google-chrome
 exec --no-startup-id code
 exec --no-startup-id alacritty
+exec --no-startup-id alacritty
+
+for_window [workspace=$ws2] layout tabbed
+for_window [workspace=$ws1] layout tabbed
