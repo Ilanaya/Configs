@@ -81,23 +81,21 @@ mode "$mode_gaps_outer" {
 ##########################################################################
 
 
-# Start XDG autostart .desktop files using dex. See also
 exec --no-startup-id dex-autostart --autostart --environment i3
 
 # ru/en layout
 # toggle with right alt
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:toggle
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id xss-lock -n '~/.config/i3/scripts/dim_screen.sh' --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
+
+exec --no-startup-id google-chrome
+exec --no-startup-id code
+exec --no-startup-id alacritty
+exec --no-startup-id alacritty
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -171,6 +169,9 @@ bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint.sh
 # Backlight control
 bindsym XF86MonBrightnessUp exec brightnessctl set +10% && notify-send "Brightness - $(brightnessctl | cut -d '.' -f 1)%"
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && notify-send "Brightness - $(brightnessctl get / brightnessctl max)%"
+
+bindsym XF86TouchpadToggle exec '~/.config/i3/scripts/toggle_touchpad.sh'
+bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots/'
 
 # change focus
 bindsym $mod+j focus left
@@ -255,7 +256,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-msg exit"
 # launch telegram
 bindsym $mod+Shift+t exec "telegram-desktop"
-
+# lock screen (supresses empty password attempts)
+bindsym $mod+Shift+Escape exec "loginctl lock-session"
 
 #---------------------------#
 #### Workspace behaviour ####
@@ -275,13 +277,5 @@ assign [class="Code"] $ws2
 assign [class="Alacritty"] $ws3
 assign [class="TelegramDesktop"] $ws5
 
-exec --no-startup-id google-chrome
-exec --no-startup-id code
-exec --no-startup-id alacritty
-exec --no-startup-id alacritty
-
 for_window [workspace=$ws2] layout tabbed
 for_window [workspace=$ws1] layout tabbed
-
-# lock screen (supresses empty password attempts)
-bindsym $mod+Shift+Escape exec "i3lock -e"
