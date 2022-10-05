@@ -282,3 +282,6 @@ exec --no-startup-id alacritty
 
 for_window [workspace=$ws2] layout tabbed
 for_window [workspace=$ws1] layout tabbed
+
+# lock screen (supresses empty password attempts)
+bindsym $mod+Shift+Escape exec "i3lock -e"
