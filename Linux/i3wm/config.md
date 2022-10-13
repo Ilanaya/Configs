@@ -14,5 +14,6 @@ EndSection
 ```
 
 * The layout is switched by pressing right alt 
+* For correct `i3status` display install font-awesome icons
 
 
