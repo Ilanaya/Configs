@@ -1,0 +1,676 @@
+{
+    "update.showReleaseNotes": false,
+    "settingsSync.ignoredSettings": [
+        "editor.fontSize",
+        "editor.fontFamily",
+        "editor.defaultFormatter"
+    ],
+    "settingsSync.keybindingsPerPlatform": false,
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.untrustedFiles": "open",
+    "references.preferredLocation": "peek",
+    "[javascript][typescript][vue][html][json][scss][css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc][json]": {
+        "editor.defaultFormatter": "zardoy.fix-all-json"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    // Files
+    "files.eol": "\n",
+    "files.maxMemoryForLargeFilesMB": 16384,
+    // Files
+    // Window
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 2,
+    "window.customMenuBarAltFocus": false,
+    "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${appName}",
+    "window.newWindowDimensions": "maximized",
+    "window.menuBarVisibility": "toggle",
+    "window.dialogStyle": "custom",
+    "window.restoreFullscreen": true,
+    "window.openFoldersInNewWindow": "on",
+    // /Window
+    // Explorer
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.copyRelativePathSeparator": "/",
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, babel.config.js, .npmrc, .gitlab-ci.yml, .eslintrc.js, .gitignore, webpack.config.js, .browserslistrc"
+    },
+    // Workbench
+    "workbench.activityBar.visible": true,
+    "workbench.iconTheme": "vs-seti",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.colorTheme": "Night Owl (No Italics)",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.enablePreview": false,
+    // Editor
+    "editor.fontSize": 17,
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.mouseWheelScrollSensitivity": 2,
+    "editor.scrollbar.verticalScrollbarSize": 12,
+    "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
+    "editor.fontFamily": "Dank Mono", //Pragmata Pro Mono
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "400",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true,
+    "editor.dragAndDrop": false,
+    "editor.cursorSurroundingLines": 6,
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.autoClosingDelete": "always",
+    "editor.suggest.preview": true,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.stickyScroll.enabled": true,
+    "editor.quickSuggestionsDelay": 5,
+    "editor.suggest.showWords": false,
+    "editor.suggest.showKeywords": false,
+    // /Editor
+    // javascript/typescript
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.referencesCodeLens.enabled": true,
+    "typescript.tsserver.log": "off",
+    "typescriptServerLogger.openType": "semantic",
+    "javascript.validate.enable": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "typescript.suggest.completeFunctionCalls": true,
+    "javascript.inlayHints.variableTypes.enabled": true,
+    "typescript.inlayHints.variableTypes.enabled": true,
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "javascript.inlayHints.enumMemberValues.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "typescript.referencesCodeLens.enabled": true,
+    // /javascript/typescript
+    // HTML
+    "html.hover.documentation": false,
+    "html.hover.references": false,
+    // /HTML
+    // Postfix
+    "postfix.inferVariableName": true,
+    "postfix.snippetPreviewMode": "inserted",
+    "postfix.languages": [
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "typescriptreact",
+        "vue",
+        "python"
+    ],
+    "postfix.customTemplate.mergeMode": "override",
+    "postfix.customTemplates": [
+        {
+            "name": "forof",
+            "description": "",
+            "body": "for (const $1 of {{expr}}) {\n\t$2\n}",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        // make IFs inline
+        {
+            "name": "if",
+            "description": "",
+            "body": "if ({{expr}}) ",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            // can leave as `else`
+            "name": "ifnot",
+            "description": "",
+            "body": "if (!{{expr}}) return",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "typeof",
+            "description": "",
+            "body": "typeof {{expr}} === '$1'",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "isArray",
+            "description": "",
+            "body": "Array.isArray({{expr}})",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "await",
+            "description": "",
+            "body": "await {{expr}}$1",
+            "when": [
+                "function-call"
+            ]
+        },
+        {
+            "name": "t",
+            "description": "",
+            "body": "$1<{{expr}}>$2",
+            "when": [
+                "type"
+            ]
+        },
+        {
+            "name": "entries",
+            "description": "",
+            "body": "Object.entries({{expr}})",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "keys",
+            "description": "",
+            "body": "Object.keys({{expr}})",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "values",
+            "description": "",
+            "body": "Object.values({{expr}})",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "fromEntries",
+            "description": "",
+            "body": "Object.fromEntries({{expr}})",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "arg",
+            "description": "",
+            "body": "$1({{expr}})$2",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "that",
+            "description": "",
+            "body": "// eslint-disable-next-line no-console\nconsole.log('{{expr}}', {{expr}});",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call",
+                "binary-expression",
+                "new-expression",
+                "unary-expression"
+            ]
+        },
+        {
+            "name": "warn",
+            "description": "",
+            "body": "console.warn('{{expr}}', {{expr}});",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "expect",
+            "description": "",
+            "body": "expect({{expr}})",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "join",
+            "description": "",
+            // if you need, you can change it to `path.join`
+            "body": "join({{expr}}, $1)",
+            "when": [
+                "identifier"
+            ]
+        },
+        {
+            "name": "ternary",
+            "description": "",
+            "body": "$1 ? {{expr}} : $2",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "moreArr",
+            "description": "",
+            "body": "[...{{expr}}, $1]",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "moreObj",
+            "description": "",
+            "body": "{...{{expr}}, $1}",
+            "when": [
+                "identifier",
+                "expression",
+                "function-call"
+            ]
+        },
+        {
+            "name": "str",
+            "description": "",
+            "body": "`$1\\${{{expr}}\\}$2`",
+            "when": [
+                "expression",
+                "identifier"
+            ]
+        },
+        {
+            "name": "arr",
+            "description": "",
+            "body": "[{{expr}}]$1",
+            "when": [
+                "expression",
+                "identifier"
+            ]
+        },
+        {
+            "name": "obj",
+            "description": "",
+            "body": "{ {{expr}} }$1",
+            "when": [
+                "expression",
+                "identifier"
+            ]
+        }
+    ],
+    // /Postfix
+    // Terminal
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "terminal.integrated.tabs.hideCondition": "never",
+    "terminal.external.windowsExec": "C:\\Program Files\\Git\\git-bash.exe",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.allowMnemonics": true,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Ubuntu (WSL)": {
+            "path": "C:\\WINDOWS\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu"
+            ]
+        }
+    },
+    // /Terminal
+    // Eslint
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "scss",
+        "css"
+    ],
+    "eslint.rules.customizations": [
+        {
+            "rule": "no-trailing-spaces",
+            "severity": "off"
+        }
+    ],
+    "eslint.format.enable": true,
+    "eslint.alwaysShowStatus": true,
+    // /Eslint
+    // ErrorLens
+    "errorLens.messageTemplate": "$count $source $message",
+    // /ErrorLens
+    // CustomizeUi
+    "customizeUI.stylesheet": {
+        "div[aria-label=\"Files Explorer\"]": "border: 1px solid transparent",
+        "div[aria-label=\"Files Explorer\"]:focus": "border-color: #007fd4;",
+        "div[widgetid=\"editor.widget.parameterHintsWidget\"]": "border-bottom: 3px solid dodgerblue;",
+        ".grid-view-container .monaco-editor:not(.rename-box)": "border-left: 1px solid transparent;",
+        ".grid-view-container .monaco-editor:not(.rename-box).focused": "border-left-color: dodgerblue",
+        ".terminal canvas": "border-top: 1px solid transparent",
+        ".terminal.focus canvas": "border-color: dodgerblue"
+    },
+    // /CustomizeUi
+    // Git
+    "git.autofetch": true,
+    "git.autoStash": true,
+    "git.allowNoVerifyCommit": true,
+    "git.confirmNoVerifyCommit": false,
+    "git.confirmSync": true,
+    // /Git
+    // Gitlens
+    "gitlens.views.repositories.showCommits": false,
+    // /Gitlens
+    // zardoyExperiments
+    "zardoyExperiments.statusbarOccurrencesCount": true,
+    "zardoyExperiments.autoIndentEmptyLine": "always",
+    "zardoyExperiments.enableExperimentalIntegrationsWithTsPlugin": true,
+    "zardoyExperiments.autoRenameJsxTag": true,
+    "zardoyExperiments.tweakTsSuggestions.enabled": true,
+    "zardoyExperiments.tweakTsSuggestions.expandMethodBeforeCurly": true,
+    "zardoyExperiments.features.showTabNumbers": "recentlyFocused",
+    // /zardoyExperiments
+    // tsEssential
+    "tsEssentialPlugins.patchOutline": true,
+    "tsEssentialPlugins.changeDtsFileDefinitionToJs": true,
+    "tsEssentialPlugins.experimentalPostfixes.enable": true,
+    "tsEssentialPlugins.arrayMethodsSnippets.addOuterTabStop": true,
+    "tsEssentialPlugins.arrayMethodsSnippets.enable": true,
+    "tsEssentialPlugins.fixSuggestionsSorting": true,
+    "tsEssentialPlugins.disableUselessHighlighting": "inAllStrings",
+    // /tsEssential
+    // SCSS
+    "scss.format.spaceAroundSelectorSeparator": true,
+    "scss.scannerExclude": [
+        "**/.git",
+        "**/bower_components",
+        "**/node_modules/!(@tc)/**"
+    ],
+    "scss.showErrors": true,
+    // /SCSS
+    // PathIntellisense
+    "path-intellisense.autoTriggerNextSuggestion": false,
+    "path-intellisense.autoSlashAfterDirectory": false,
+    // /PathIntellisense
+    // DiffEditor
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false,
+    // /DiffEditor
+    // Prettier
+    "prettier.singleQuote": true,
+    // /Prettier
+    // Search
+    "search.seedOnFocus": true,
+    // /Search
+    // BemHelper
+    "bemHelper.showDepthWarnings": false,
+    // /BemHelper
+    "python.defaultInterpreterPath": "/usr/bin/python",
+    // MergeEditor
+    "mergeEditor.diffAlgorithm": "experimental",
+    // /MergeEditor
+    // Debug
+    "debug.autoExpandLazyVariables": true,
+    // /Debug
+    // BetterSnippets
+    "betterSnippets.enableExperimentalSnippets": true,
+    "betterSnippets.languageSupersets": {
+        "js": [
+            "typescript",
+            "javascript",
+            "typescriptreact",
+            "javascriptreact",
+            "vue"
+        ],
+        "react": [
+            "javascriptreact",
+            "typescriptreact"
+        ],
+        "ts": [
+            "typescript",
+            "typescriptreact"
+        ],
+        "styles": [
+            "css",
+            "scss",
+            "sass",
+            "source.css.styled"
+        ]
+    },
+    "betterSnippets.typingSnippets": [
+        {
+            "sequence": "pgt",
+            "body": "this.\\$pgettext('$1', $2)",
+            "when": {
+                "languages": [
+                    "vue",
+                    "javascript"
+                ]
+            }
+        },
+        {
+            "sequence": "size ",
+            "body": "@include size($1);",
+            "when": {
+                "languages": [
+                    "sccs",
+                    "css",
+                    "vue"
+                ]
+            }
+        },
+        {
+            "sequence": "btch ",
+            "body": "@include between-children() {\n\t$1\n};",
+            "when": {
+                "languages": [
+                    "sccs",
+                    "css",
+                    "vue"
+                ]
+            }
+        },
+        {
+            "sequence": "inc ",
+            "body": "@include ",
+            "when": {
+                "languages": [
+                    "sccs",
+                    "css",
+                    "vue"
+                ]
+            }
+        },
+        {
+            "sequence": "cn ",
+            "body": "const ",
+            "when": {
+                "lineRegex": "^\\s*cn "
+            }
+        },
+        {
+            "sequence": "cb",
+            "body": "const $1 = ($2) => ",
+            "when": {
+                "locations": [
+                    "lineStart"
+                ]
+            }
+        },
+        {
+            "sequence": "cb",
+            "body": "($1) => "
+        },
+        {
+            "sequence": "imp",
+            "body": "import $2 from '$1'",
+            "when": {
+                "locations": [
+                    "lineStart"
+                ]
+            }
+        },
+        {
+            "sortText": "!",
+            "sequence": " ",
+            "when": {
+                "lineRegex": "(computed|methods|props|components|watch) $",
+                "otherLines": [
+                    {
+                        "indent": -1,
+                        "testRegex": "^\\s*(export default):? {$"
+                    }
+                ],
+                "languages": [
+                    "vue"
+                ]
+            },
+            "body": ": {\n\t$0\n},"
+        },
+        {
+            "sortText": "!",
+            "sequence": " ",
+            "when": {
+                "lineRegex": "data $",
+                "otherLines": [
+                    {
+                        "indent": -1,
+                        "testRegex": "^\\s*(export default):? {$"
+                    }
+                ],
+                "languages": [
+                    "vue"
+                ]
+            },
+            "body": "() {\n\treturn {\n\t\t$0\n\t};\n},"
+        },
+        {
+            "sortText": "!",
+            "sequence": " ",
+            "when": {
+                "otherLines": [
+                    {
+                        "indent": -1,
+                        "testRegex": "^\\s*(props):? {$"
+                    }
+                ],
+                "languages": [
+                    "vue"
+                ]
+            },
+            "body": ": {\n\ttype: $1,\n\trequired: true$2,\n\tdefault: $3\n},"
+        },
+        {
+            "sortText": "!",
+            "sequence": "  ",
+            "when": {
+                "lineRegex": "\\w  $",
+                "otherLines": [
+                    {
+                        "indent": -1,
+                        "testRegex": "^\\s*(methods|export default):? {$"
+                    }
+                ],
+                "languages": [
+                    "vue",
+                    "javascript"
+                ]
+            },
+            "body": "($1) {\n\t$0\n},"
+        },
+        {
+            "sortText": "!",
+            "sequence": "  ",
+            "when": {
+                "lineRegex": "\\w  $",
+                "otherLines": [
+                    {
+                        "indent": -1,
+                        "testRegex": "^\\s*computed:? {$"
+                    }
+                ],
+                "languages": [
+                    "vue",
+                    "javascript"
+                ]
+            },
+            "body": "() {\n\treturn $1\n},"
+        }
+    ],
+    "betterSnippets.customSnippets": [
+        {
+            "name": "toggle",
+            "body": "= !$VAR",
+            "when": {
+                "languages": [
+                    "vue"
+                ],
+                "lineRegex": "@(.+?)=\"(?<VAR>[^ ]+)"
+            }
+        },
+        {
+            "name": "getset",
+            "when": {
+                "locations": [
+                    "lineStart"
+                ]
+            },
+            "body": "get() {\n\treturn $1\n},\nset(value) {\n\t$2\n}",
+            "iconType": "Snippet"
+        }
+    ]
+    // /BetterSnippets
+}
