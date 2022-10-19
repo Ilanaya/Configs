@@ -255,7 +255,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-msg exit"
 # launch telegram
-bindsym $mod+Shift+t exec "telegram-desktop"
+bindsym $mod+Shift+t exec "Telegram"
 # lock screen (supresses empty password attempts)
 bindsym $mod+Shift+Escape exec "loginctl lock-session"
 
