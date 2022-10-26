@@ -372,5 +372,24 @@
   {
     "key": "ctrl+k ctrl+b",
     "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "shift+ctrl+v",
+    "mac": "shift+cmd+v",
+    "command": "editor.action.codeAction",
+    "args": {
+      "kind": "refactor.extract",
+      "apply": "first"
+    },
+    "when": "editorTextFocus && editorLangId != 'markdown'"
+  },
+  {
+    "key": "ctrl+alt+1",
+    "command": "editor.action.codeAction",
+    "args": {
+      "kind": "refactor.rewrite.toggle.braces",
+      "apply": "ifSingle"
+    },
+    "when": "editorTextFocus"
   }
 ]
