@@ -255,10 +255,11 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-msg exit"
 # launch telegram
-bindsym $mod+Shift+t exec "Telegram"
+bindsym $mod+Shift+t exec Telegram
 # lock screen (supresses empty password attempts)
 bindsym $mod+Shift+Escape exec "loginctl lock-session"
-
+# lauch rofi-pass
+bindsym $mod+Shift+p exec rofi-pass
 #---------------------------#
 #### Workspace behaviour ####
 #---------------------------#
@@ -276,6 +277,7 @@ assign [class="Google-chrome"] $ws1
 assign [class="Code"] $ws2
 assign [class="Alacritty"] $ws3
 assign [class="TelegramDesktop"] $ws5
+assign [class="TrueConf"] $ws6
 
 for_window [workspace=$ws2] layout tabbed
 for_window [workspace=$ws1] layout tabbed

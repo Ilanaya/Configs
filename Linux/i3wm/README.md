@@ -1,0 +1,1 @@
+To find application class use `xprop`
