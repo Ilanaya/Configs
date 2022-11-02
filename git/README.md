@@ -10,3 +10,7 @@ trying to checkout (a) doesn’t exist and (b) exactly matches a name on only on
     `git checkout <branch>`
 ***
 5. Upstream branch can be referenced as `@{upstream}` or `@{u}`, i.e. `git merge origin/main` can be replaced with `git merge @{u}`
+***
+6.  `git rebase --onto <target> <parent> <child>`
+  
+    If `child` is subbranch of `parent` this command will rebase all commits from `child`, ignoring commits, presented in parent onto `target`
