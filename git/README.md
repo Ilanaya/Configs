@@ -14,3 +14,5 @@ trying to checkout (a) doesn’t exist and (b) exactly matches a name on only on
 6.  `git rebase --onto <target> <parent> <child>`
   
     If `child` is subbranch of `parent` this command will rebase all commits from `child`, ignoring commits, presented in parent onto `target`
+
+7. Commit can be references by at least four chars of its SHA-1 hash, but there has to be an ambiguous reference. `git log --abbrev-commit` will show log with shorter values, but keep them unique (7 chars by default)
