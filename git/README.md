@@ -16,3 +16,4 @@ trying to checkout (a) doesn’t exist and (b) exactly matches a name on only on
     If `child` is subbranch of `parent` this command will rebase all commits from `child`, ignoring commits, presented in parent onto `target`
 
 7. Commit can be references by at least four chars of its SHA-1 hash, but there has to be an ambiguous reference. `git log --abbrev-commit` will show log with shorter values, but keep them unique (7 chars by default)
+8. Parent referencing can be done in two ways: using `~` and `^`. The difference between them become clear when number in specified, e.g. `HEAD~2` means parent of parent, `HEAD^2` means _second_ parent of the commit (only useful with merge commits, where the _first_ parent is commit from the merge target branch and the _second_ parent is from the merging branch). The following syntaxes are correct - `HEAD~~~`, `HEAD~2^2`.
