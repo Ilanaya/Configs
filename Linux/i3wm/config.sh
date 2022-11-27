@@ -86,10 +86,6 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # ru/en layout
 # toggle with right alt
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:toggle
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock -n '~/.config/i3/scripts/dim_screen.sh' --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 exec --no-startup-id google-chrome
@@ -248,6 +244,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# lock screen
+bindsym $mod+Shift+Escape exec betterlockscreen -l
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -257,7 +255,7 @@ bindsym $mod+Shift+e exec "i3-msg exit"
 # launch telegram
 bindsym $mod+Shift+t exec Telegram
 # lock screen (supresses empty password attempts)
-bindsym $mod+Shift+Escape exec "loginctl lock-session"
+# bindsym $mod+Shift+Escape exec "loginctl lock-session"
 # lauch rofi-pass
 bindsym $mod+Shift+p exec rofi-pass
 #---------------------------#
