@@ -1,395 +1,454 @@
 [
-  {
-    "mac": "cmd+shift+d",
-    "key": "ctrl+shift+d",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+k e",
-    "command": "workbench.explorer.fileView.focus"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+shift+,",
-    "command": "workbench.action.navigateBack"
-  },
-  {
-    "key": "ctrl+shift+.",
-    "command": "workbench.action.navigateForward"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "editor.action.joinLines"
-  },
-  {
-    "key": "ctrl+'",
-    "command": "findJump.activate"
-  },
-  {
-    "key": "ctrl+shift+'",
-    "command": "findJump.activateWithSelection"
-  },
-  {
-    "mac": "shift+cmd+[",
-    "key": "shift+ctrl+[",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus || terminalTabsFocus"
-  },
-  {
-    "mac": "shift+cmd+]",
-    "key": "shift+ctrl+]",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus || terminalTabsFocus"
-  },
-  {
-    "mac": "cmd+k cmd+u",
-    "key": "ctrl+k ctrl+u",
-    "command": "editor.action.transformToUppercase",
-    "when": "editorTextFocus"
-  },
-  {
-    "mac": "cmd+k cmd+l",
-    "key": "ctrl+k ctrl+l",
-    "command": "editor.action.transformToLowercase",
-    "when": "editorTextFocus"
-  },
-  {
-    "mac": "cmd+alt+/",
-    "key": "shift+ctrl+/",
-    "command": "editor.action.blockComment",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+down",
-    "command": "workbench.action.compareEditor.nextChange",
-    "when": "textCompareEditorVisible"
-  },
-  {
-    "key": "alt+up",
-    "command": "workbench.action.compareEditor.previousChange",
-    "when": "textCompareEditorVisible"
-  },
-  {
-    "key": "shift+ctrl+4",
-    "mac": "shift+alt+4",
-    "command": "zardoyExperiments.copyFileName"
-  },
-  {
-    "mac": "cmd+n",
-    "key": "ctrl+n",
-    "command": "explorer.newFile"
-  },
-  {
-    "mac": "shift+alt+.",
-    "key": "ctrl+alt+.",
-    "command": "editor.action.smartSelect.expand",
-    "when": "editorTextFocus"
-  },
-  {
-    "mac": "shift+alt+,",
-    "key": "ctrl+alt+,",
-    "command": "editor.action.smartSelect.shrink",
-    "when": "editorTextFocus"
-  },
-  {
-    "mac": "shift+cmd+[",
-    "key": "shift+ctrl+[",
-    "command": "workbench.action.previousEditor",
-    "when": "!terminalFocus && !terminalTabsFocus"
-  },
-  {
-    "mac": "shift+cmd+]",
-    "key": "shift+ctrl+]",
-    "command": "workbench.action.nextEditor",
-    "when": "!terminalFocus && !terminalTabsFocus"
-  },
-  {
-    "key": "ctrl+alt+s",
-    "command": "workbench.action.files.saveFiles"
-  },
-  {
-    "key": "ctrl+alt+x",
-    "command": "extension.extractClasses"
-  },
-  {
-    "key": "alt+s",
-    "command": "git.checkout"
-  },
-  {
-    "key": "alt+e",
-    "command": "gitlens.openRepoOnRemote"
-  },
-  {
-    "key": "alt+r",
-    "command": "workbench.action.openRecent"
-  },
-  {
-    "key": "alt+d",
-    "command": "editor.action.insertSnippet",
-    "when": "editorFocus",
-    "args": {
-      "snippet": "debugger;"
+    {
+        "mac": "cmd+shift+d",
+        "key": "ctrl+shift+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "mac": "cmd+k n",
+        "key": "ctrl+k n",
+        "command": "commands.run",
+        "args": ["workbench.files.action.collapseExplorerFolders", "workbench.files.action.showActiveFileInExplorer", "workbench.action.focusActiveEditorGroup"]
+    },
+    {
+        "key": "ctrl+k h",
+        "command": "commands.run",
+        "args": ["workbench.action.toggleActivityBarVisibility", "workbench.action.toggleSidebarVisibility"]
+    },
+    {
+        "key": "ctrl+k ctrl+a",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "ctrl+k e",
+        "command": "workbench.explorer.fileView.focus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+,",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+shift+.",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.joinLines"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "findJump.activate"
+    },
+    {
+        "key": "ctrl+shift+'",
+        "command": "findJump.activateWithSelection"
+    },
+    {
+        "mac": "shift+cmd+[",
+        "key": "shift+ctrl+[",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus || terminalTabsFocus"
+    },
+    {
+        "mac": "shift+cmd+]",
+        "key": "shift+ctrl+]",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus || terminalTabsFocus"
+    },
+    {
+        "mac": "cmd+k cmd+u",
+        "key": "ctrl+k ctrl+u",
+        "command": "editor.action.transformToUppercase",
+        "when": "editorTextFocus"
+    },
+    {
+        "mac": "cmd+k cmd+l",
+        "key": "ctrl+k ctrl+l",
+        "command": "editor.action.transformToLowercase",
+        "when": "editorTextFocus"
+    },
+    {
+        "mac": "cmd+alt+/",
+        "key": "shift+ctrl+/",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+down",
+        "command": "workbench.action.compareEditor.nextChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "alt+up",
+        "command": "workbench.action.compareEditor.previousChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "shift+ctrl+4",
+        "mac": "shift+alt+4",
+        "command": "zardoyExperiments.copyFileName"
+    },
+    {
+        "mac": "cmd+n",
+        "key": "ctrl+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "mac": "shift+alt+.",
+        "key": "ctrl+alt+.",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "mac": "shift+alt+,",
+        "key": "ctrl+alt+,",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+    },
+    {
+        "mac": "shift+cmd+[",
+        "key": "shift+ctrl+[",
+        "command": "workbench.action.previousEditor",
+        "when": "!terminalFocus && !terminalTabsFocus"
+    },
+    {
+        "mac": "shift+cmd+]",
+        "key": "shift+ctrl+]",
+        "command": "workbench.action.nextEditor",
+        "when": "!terminalFocus && !terminalTabsFocus"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "workbench.action.files.saveFiles"
+    },
+    {
+        "key": "ctrl+alt+x",
+        "command": "extension.extractClasses"
+    },
+    {
+        "key": "alt+s",
+        "command": "git.checkout"
+    },
+    {
+        "key": "alt+e",
+        "command": "gitlens.openRepoOnRemote"
+    },
+    {
+        "key": "alt+r",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "alt+d",
+        "command": "editor.action.insertSnippet",
+        "when": "editorFocus",
+        "args": {
+            "snippet": "// eslint-disable-next-line no-debugger\ndebugger;"
+        }
+    },
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.switchWindow"
+    },
+    {
+        "key": "ctrl+alt+backspace",
+        "command": "bracketeer.removeBrackets"
+    },
+    {
+        "key": "shift+ctrl+enter",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "extraCommands.goToLine"
+    },
+    {
+        "mac": "cmd+; d",
+        "key": "ctrl+; d",
+        "command": "git.cleanAll"
+    },
+    {
+        "key": "shift+alt+=",
+        "command": "toggleSearchEditorWholeWord",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "shift+alt+=",
+        "command": "workbench.action.terminal.toggleFindWholeWord",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "shift+alt+=",
+        "command": "toggleFindWholeWord",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+f",
+        "command": "editor.action.formatDocument.multiple"
+    },
+    {
+        "key": "ctrl+shift+3",
+        "command": "zardoyExperiments.copyLineVariableName"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "zardoyExperiments.cutLineContents"
+    },
+    {
+        "key": "ctrl+alt+c",
+        "command": "workbench.action.closePanel"
+    },
+    {
+        "command": "zardoyExperiments.renameVariablePartsAcceptReplace",
+        "key": "ctrl+l",
+        "mac": "cmd+l",
+        "when": "zardoyExperiments.renameVariablePartsOpened"
+    },
+    {
+        "key": "ctrl+alt+p",
+        "command": "zardoyExperiments.renameVariableParts"
+    },
+    {
+        "key": "ctrl+alt+h",
+        "command": "git.openChange",
+        "when": "!isInDiffEditor"
+    },
+    {
+        "key": "ctrl+alt+h",
+        "command": "git.openFile",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "shift+alt+8",
+        "command": "extension.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+-",
+        "command": "npmRapidReady.runMainNpmScript"
+    },
+    {
+        "key": "shift+alt+p",
+        "command": "npmRapidReady.openClosestPackageJson"
+    },
+    {
+        "key": "ctrl+; l",
+        "command": "git.pull"
+    },
+    {
+        "key": "ctrl+; c",
+        "command": "git.commit"
+    },
+    {
+        "key": "ctrl+; m",
+        "command": "git.commitMessageAccept"
+    },
+    {
+        "key": "ctrl+; h",
+        "command": "git.push"
+    },
+    {
+        "key": "ctrl+; ;",
+        "command": "workbench.action.openSettingsJson"
+    },
+    {
+        "key": "ctrl+k j",
+        "command": "filesExplorer.findInFolder",
+        "when": "explorerViewletVisible"
+    },
+    {
+        "key": "ctrl+; n",
+        "command": "git.commitMessageDiscard"
+    },
+    {
+        "key": "ctrl+k i",
+        "command": "zardoyExperiments.removeUnusedImports"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "zardoyExperiments.selectOutlineItem"
+    },
+    {
+        "key": "ctrl+shift+2",
+        "command": "zardoyExperiments.copyOutlineItemName"
+    },
+    {
+        "key": "ctrl+alt+1",
+        "command": "editor.action.codeAction",
+        "args": {
+            "kind": "refactor.rewrite.toggle.braces",
+            "apply": "ifSingle"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+v",
+        "mac": "shift+cmd+v",
+        "command": "editor.action.codeAction",
+        "args": {
+            "kind": "refactor.extract",
+            "apply": "first"
+        },
+        "when": "editorTextFocus && editorLangId != 'markdown'"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "zardoyExperiments.focusTabByNumber",
+        "args": 1
+    },
+    {
+        "key": "ctrl+2",
+        "command": "zardoyExperiments.focusTabByNumber",
+        "args": 2
+    },
+    {
+        "key": "ctrl+3",
+        "command": "zardoyExperiments.focusTabByNumber",
+        "args": 3
+    },
+    {
+        "key": "ctrl+4",
+        "command": "zardoyExperiments.focusTabByNumber",
+        "args": 4
+    },
+    {
+        "key": "ctrl+5",
+        "command": "zardoyExperiments.focusTabByNumber",
+        "args": 5
+    },
+    {
+        "key": "ctrl+6",
+        "command": "zardoyExperiments.focusTabByNumber",
+        "args": 6
+    },
+    {
+        "key": "ctrl+7",
+        "command": "zardoyExperiments.focusTabByNumber",
+        "args": 7
+    },
+    {
+        "key": "ctrl+8",
+        "command": "zardoyExperiments.focusTabByNumber",
+        "args": 8
+    },
+    {
+        "key": "ctrl+9",
+        "command": "zardoyExperiments.focusTabByNumber",
+        "args": 9
+    },
+    {
+        "key": "ctrl+; s",
+        "command": "git.stageAll"
+    },
+    {
+        "key": "ctrl+shift+alt+h",
+        "command": "editor.action.selectToBracket"
+    },
+    {
+        "key": "ctrl+alt+=",
+        "command": "npmRapidReady.runNpmScript"
+    },
+    {
+        "key": "ctrl+; t",
+        "command": "git.stageAllTracked"
+    },
+    {
+        "key": "ctrl+; p",
+        "command": "git.publish"
+    },
+    {
+        "key": "ctrl+shift+f f",
+        "command": "search.action.openEditor"
+    },
+    {
+        "key": "down",
+        "command": "search.focus.nextInputBox",
+        "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+    },
+    {
+        "key": "up",
+        "command": "search.focus.previousInputBox",
+        "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
+    },
+    {
+        "key": "ctrl+; ctrl+n",
+        "command": "git.commitNoVerify"
+    },
+    {
+        "key": "ctrl+k ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "alt+b c",
+        "command": "extension.bemHelper.insertClassName"
+    },
+    {
+        "key": "ctrl+k ctrl+r",
+        "command": "git.revertSelectedRanges"
+    },
+    {
+        "key": "ctrl+alt+f",
+        "command": "gitlens.openWorkingFile"
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "editor.action.addSelectionToPreviousFindMatch"
+    },
+    {
+        "key": "ctrl+k ctrl+e",
+        "command": "workbench.action.openView"
+    },
+    {
+        "key": "alt+m",
+        "command": "search.action.focusSearchList"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "zardoyExperiments.renameVariablePartsLowercasePart",
+        "when": "zardoyExperiments.renameVariablePartsOpened"
+    },
+    {
+        "key": "ctrl+alt+[",
+        "command": "zardoyExperiments.renameFileParts"
+    },
+    {
+        "key": "ctrl+shift+alt+r",
+        "command": "workbench.action.reloadWindow"
+    },
+    {
+        "key": "ctrl+k ctrl+alt+r",
+        "command": "typescript.restartTsServer"
+    },
+    {
+        "key": "ctrl+k ctrl+alt+e",
+        "command": "focusActiveDevelopmentExtensionOutput"
+    },
+    {
+        "key": "ctrl+shift+alt+f",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "mac": "shift+cmd+g w",
+        "key": "shift+ctrl+g w",
+        "command": "git.closeAllDiffEditors"
     }
-  },
-  {
-    "key": "ctrl+d",
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
-  },
-  {
-    "key": "alt+w",
-    "command": "workbench.action.switchWindow"
-  },
-  {
-    "key": "ctrl+alt+backspace",
-    "command": "bracketeer.removeBrackets"
-  },
-  {
-    "key": "shift+ctrl+enter",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+g",
-    "command": "extraCommands.goToLine"
-  },
-  {
-    "mac": "cmd+; d",
-    "key": "ctrl+; d",
-    "command": "git.cleanAll"
-  },
-  {
-    "key": "shift+alt+=",
-    "command": "toggleSearchEditorWholeWord",
-    "when": "inSearchEditor && searchInputBoxFocus"
-  },
-  {
-    "key": "shift+alt+=",
-    "command": "workbench.action.terminal.toggleFindWholeWord",
-    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+=",
-    "command": "toggleFindWholeWord",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+k ctrl+f",
-    "command": "editor.action.formatDocument.multiple"
-  },
-  {
-    "key": "ctrl+shift+3",
-    "command": "zardoyExperiments.copyLineVariableName"
-  },
-  {
-    "key": "ctrl+alt+l",
-    "command": "zardoyExperiments.cutLineContents"
-  },
-  {
-    "key": "ctrl+alt+c",
-    "command": "workbench.action.closePanel"
-  },
-  {
-    "command": "zardoyExperiments.renameVariablePartsAccept",
-    "key": "ctrl+o",
-    "mac": "cmd+o",
-    "when": "zardoyExperiments.renameVariablePartsOpened"
-  },
-  {
-    "command": "zardoyExperiments.renameVariablePartsAcceptReplace",
-    "key": "ctrl+l",
-    "mac": "cmd+l",
-    "when": "zardoyExperiments.renameVariablePartsOpened"
-  },
-  {
-    "key": "ctrl+alt+p",
-    "command": "zardoyExperiments.renameVariableParts"
-  },
-  {
-    "key": "ctrl+alt+h",
-    "command": "git.openChange",
-    "when": "!isInDiffEditor"
-  },
-  {
-    "key": "ctrl+alt+h",
-    "command": "git.openFile",
-    "when": "isInDiffEditor"
-  },
-  {
-    "key": "shift+alt+8",
-    "command": "extension.toggle",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+alt+-",
-    "command": "npmRapidReady.runMainNpmScript"
-  },
-  {
-    "key": "shift+alt+p",
-    "command": "npmRapidReady.openClosestPackageJson"
-  },
-  {
-    "key": "ctrl+; l",
-    "command": "git.pull"
-  },
-  {
-    "key": "ctrl+; c",
-    "command": "git.commit"
-  },
-  {
-    "key": "ctrl+; m",
-    "command": "git.commitMessageAccept"
-  },
-  {
-    "key": "ctrl+; h",
-    "command": "git.push"
-  },
-  {
-    "key": "ctrl+; ;",
-    "command": "workbench.action.openSettingsJson"
-  },
-  {
-    "key": "ctrl+k j",
-    "command": "filesExplorer.findInFolder",
-    "when": "explorerViewletVisible"
-  },
-  {
-    "key": "ctrl+; n",
-    "command": "git.commitMessageDiscard"
-  },
-  {
-    "key": "ctrl+k i",
-    "command": "zardoyExperiments.removeUnusedImports"
-  },
-  {
-    "key": "ctrl+alt+o",
-    "command": "zardoyExperiments.selectOutlineItem"
-  },
-  {
-    "key": "ctrl+shift+2",
-    "command": "zardoyExperiments.copyOutlineItemName"
-  },
-  {
-    "key": "ctrl+alt+1",
-    "command": "abracadabra.toggleBraces"
-  },
-  {
-    "key": "ctrl+1",
-    "command": "zardoyExperiments.focusTabByNumber",
-    "args": 1
-  },
-  {
-    "key": "ctrl+2",
-    "command": "zardoyExperiments.focusTabByNumber",
-    "args": 2
-  },
-  {
-    "key": "ctrl+3",
-    "command": "zardoyExperiments.focusTabByNumber",
-    "args": 3
-  },
-  {
-    "key": "ctrl+4",
-    "command": "zardoyExperiments.focusTabByNumber",
-    "args": 4
-  },
-  {
-    "key": "ctrl+5",
-    "command": "zardoyExperiments.focusTabByNumber",
-    "args": 5
-  },
-  {
-    "key": "ctrl+6",
-    "command": "zardoyExperiments.focusTabByNumber",
-    "args": 6
-  },
-  {
-    "key": "ctrl+7",
-    "command": "zardoyExperiments.focusTabByNumber",
-    "args": 7
-  },
-  {
-    "key": "ctrl+8",
-    "command": "zardoyExperiments.focusTabByNumber",
-    "args": 8
-  },
-  {
-    "key": "ctrl+9",
-    "command": "zardoyExperiments.focusTabByNumber",
-    "args": 9
-  },
-  {
-    "key": "ctrl+; s",
-    "command": "git.stageAll"
-  },
-  {
-    "key": "ctrl+shift+alt+h",
-    "command": "editor.action.selectToBracket"
-  },
-  {
-    "key": "ctrl+alt+=",
-    "command": "npmRapidReady.runNpmScript"
-  },
-  {
-    "key": "ctrl+; t",
-    "command": "git.stageAllTracked"
-  },
-  {
-    "key": "ctrl+; p",
-    "command": "git.publish"
-  },
-  {
-    "key": "ctrl+shift+f f",
-    "command": "search.action.openEditor"
-  },
-  {
-    "key": "ctrl+shift+f",
-    "command": "workbench.view.search.focus"
-  },
-  {
-    "key": "alt+down ctrl",
-    "command": "search.focus.nextInputBox",
-    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
-  },
-  {
-    "key": "alt+up ctrl",
-    "command": "search.focus.previousInputBox",
-    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
-  },
-  {
-    "key": "ctrl+; ctrl+n",
-    "command": "git.commitNoVerify"
-  },
-  {
-    "key": "ctrl+k ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "shift+ctrl+v",
-    "mac": "shift+cmd+v",
-    "command": "editor.action.codeAction",
-    "args": {
-      "kind": "refactor.extract",
-      "apply": "first"
-    },
-    "when": "editorTextFocus && editorLangId != 'markdown'"
-  },
-  {
-    "key": "ctrl+alt+1",
-    "command": "editor.action.codeAction",
-    "args": {
-      "kind": "refactor.rewrite.toggle.braces",
-      "apply": "ifSingle"
-    },
-    "when": "editorTextFocus"
-  }
 ]
