@@ -27,3 +27,8 @@ $ git log ^refA refB
 $ git log refB --not refA
 ```
 11. Triple-dot syntax specifies all the commits thatare reachable by either of two references but _not_ by both of them. Almost useless without `--left-right`
+12. 
+  `git stash --keep-index` (-k) - stashes only tracked, not indexed changes
+  `git stash --include-untracked` (-u)
+  `git stash --staged` (-S)
+ 
