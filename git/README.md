@@ -31,4 +31,16 @@ $ git log refB --not refA
   `git stash --keep-index` (-k) - stashes only tracked, not indexed changes
   `git stash --include-untracked` (-u)
   `git stash --staged` (-S)
- 
+
+13. Change commit name/email globally:
+```shell
+git filter-branch --commit-filter '
+  if [ "$GIT_AUTHOR_EMAIL" = "mycompany@email" ];
+  then
+    GIT_AUTHOR_NAME="Ilya Golovin";
+    GIT_AUTHOR_EMAIL="me@ilscc.ru";
+    git commit-tree "$@";
+  else
+    git commit-tree "$@";
+  fi' HEAD
+```
