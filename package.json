@@ -1,0 +1,32 @@
+{
+  "name": "maiiady-configs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maIIady/Configs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maIIady/Configs/issues"
+  },
+  "homepage": "https://github.com/maIIady/Configs#readme",
+  "dependencies": {
+    "modify-json-file": "^1.2.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "proseWrap": "never",
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "arrowParens": "avoid",
+    "printWidth": 180,
+    "endOfLine": "auto"
+  }
+}
