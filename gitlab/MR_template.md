@@ -1,5 +1,5 @@
 **MR changes**
 
-*
+%{all_commits}
 
-[OP]()
+[OpenProject]()
