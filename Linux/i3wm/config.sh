@@ -167,7 +167,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +10% && notify-send "Brightne
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && notify-send "Brightness - $(brightnessctl get / brightnessctl max)%"
 
 bindsym XF86TouchpadToggle exec '~/.config/i3/scripts/toggle_touchpad.sh'
-bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots/'
+bindsym Print exec gnome-screenshot -i
 
 # change focus
 bindsym $mod+j focus left
