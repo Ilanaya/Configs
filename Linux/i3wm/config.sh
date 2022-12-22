@@ -14,6 +14,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+
 #Font for window titles.
 font pango:Hack Nerd Font Regular 14
 #Colors
@@ -265,11 +266,11 @@ bindsym $mod+Shift+p exec rofi-pass
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
 # you can get from xrandr command
-#workspace $ws1 output VGA-0
-#workspace $ws2 output VGA-0
-#workspace $ws3 output HDMI-0
-#workspace $ws4 output HDMI-0
-#workspace $ws5 output HDMI-0
+workspace $ws7 output HDMI-A-0
+workspace $ws8 output HDMI-A-0
+workspace $ws9 output HDMI-A-0
+# workspace $ws5 output HDMI-0
+# I'm currently moving $ws1 to $ws 7 when using 2 monitor setup
 
 assign [class="Google-chrome"] $ws1
 assign [class="Code"] $ws2
