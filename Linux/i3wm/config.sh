@@ -86,7 +86,10 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # ru/en layout
 # toggle with right alt
-exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:toggle
+# exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:toggle
+# exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle
+# exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alts_toggle
+exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_space_toggle
 exec --no-startup-id nm-applet
 
 exec --no-startup-id google-chrome
@@ -167,7 +170,7 @@ bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint.sh
 bindsym XF86MonBrightnessUp exec brightnessctl set +10% && notify-send "Brightness - $(brightnessctl | cut -d '.' -f 1)%"
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%- && notify-send "Brightness - $(brightnessctl get / brightnessctl max)%"
 
-bindsym XF86TouchpadToggle exec '~/.config/i3/scripts/toggle_touchpad.sh'
+bindsym XF86TouchpadToggle exec "~/.config/i3/scripts/toggle_touchpad.sh"
 bindsym Print exec gnome-screenshot -i
 
 # change focus
@@ -246,7 +249,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # lock screen
-bindsym $mod+Shift+Escape exec betterlockscreen -l
+bindsym $mod+Shift+Escape exec "i3lock && echo mem > /sys/power/state"
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
