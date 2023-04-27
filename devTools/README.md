@@ -1,0 +1,1 @@
+`alt + click` on object to expand properties recursively
