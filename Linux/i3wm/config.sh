@@ -92,6 +92,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -option grp:alt_space_toggle
 exec --no-startup-id nm-applet
 
+exec --no-startup-id expressvpn connect
 exec --no-startup-id google-chrome
 exec --no-startup-id code
 exec --no-startup-id alacritty
@@ -138,7 +139,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+    output primary
+    status_command i3status
 }
 
 
@@ -266,6 +268,7 @@ bindsym $mod+Shift+p exec rofi-pass
 #### Workspace behaviour ####
 #---------------------------#
 
+bindsym $mod+m move workspace to output left
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
 # you can get from xrandr command
@@ -273,7 +276,6 @@ workspace $ws7 output HDMI-A-0
 workspace $ws8 output HDMI-A-0
 workspace $ws9 output HDMI-A-0
 # workspace $ws5 output HDMI-0
-# I'm currently moving $ws1 to $ws 7 when using 2 monitor setup
 
 assign [class="Google-chrome"] $ws1
 assign [class="Code"] $ws2
@@ -283,3 +285,20 @@ assign [class="TrueConf"] $ws6
 
 for_window [workspace=$ws2] layout tabbed
 for_window [workspace=$ws1] layout tabbed
+
+# redshift modes
+bindsym $mod+Shift+h mode "$mode_redshift"
+set $mode_redshift Set colour temperature: (a)uto, (r)eset, (2)500K, (3)000K, (4)000K, (5)000K
+set $kill_redshift pkill -9 redshift;
+mode "$mode_redshift" {
+    bindsym a exec --no-startup-id "$kill_redshift redshift -P -t 5000:4000", mode "default"
+    bindsym r exec --no-startup-id "$kill_redshift redshift -x", mode "default"
+    bindsym 2 exec --no-startup-id "$kill_redshift redshift -P -O 2500", mode "default"
+    bindsym 3 exec --no-startup-id "$kill_redshift redshift -P -O 3000", mode "default"
+    bindsym 4 exec --no-startup-id "$kill_redshift redshift -P -O 4000", mode "default"
+    bindsym 5 exec --no-startup-id "$kill_redshift redshift -P -O 5000", mode "default"
+ 
+    # exit mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
