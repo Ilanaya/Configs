@@ -277,8 +277,9 @@ workspace $ws8 output HDMI-A-0
 workspace $ws9 output HDMI-A-0
 # workspace $ws5 output HDMI-0
 
+# call `xprop` find `WM_CLASS`
 assign [class="Google-chrome"] $ws1
-assign [class="Code"] $ws2
+assign [class="Code - Insiders"] $ws2
 assign [class="Alacritty"] $ws3
 assign [class="TelegramDesktop"] $ws5
 assign [class="TrueConf"] $ws6
