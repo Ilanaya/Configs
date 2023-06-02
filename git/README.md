@@ -19,14 +19,14 @@ trying to checkout (a) doesn’t exist and (b) exactly matches a name on only on
 8. Parent referencing can be done in two ways: using `~` and `^`. The difference between them become clear when number in specified, e.g. `HEAD~2` means parent of parent, `HEAD^2` means _second_ parent of the commit (only useful with merge commits, where the _first_ parent is commit from the merge target branch and the _second_ parent is from the merging branch). The following syntaxes are correct - `HEAD~~~`, `HEAD~2^2`.
    
 ***
-9.  In command is like `git log origin/main..` the argument after two dots is substituted with `HEAD`
+9.  If command resembles `git log origin/main..` the argument after two dots is substituted with `HEAD`
 10. The following commands are aliases:
 ```shell
 $ git log refA..refB
 $ git log ^refA refB
 $ git log refB --not refA
 ```
-11. Triple-dot syntax specifies all the commits thatare reachable by either of two references but _not_ by both of them. Almost useless without `--left-right`
+11. Triple-dot syntax specifies all the commits that are reachable by either of two references but _not_ by both of them. Almost useless without `--left-right`
 12. 
   `git stash --keep-index` (-k) - stashes only tracked, not indexed changes
   `git stash --include-untracked` (-u)
@@ -44,3 +44,6 @@ git filter-branch --commit-filter '
     git commit-tree "$@";
   fi' HEAD
 ```
+*** Merge conflictss
+14. To simply choose a specific side and ignore the other, pass the merge command either a `-Xours` or `-Xtheirs`.
+`git merge -Xours master`
