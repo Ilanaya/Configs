@@ -44,6 +44,11 @@ git filter-branch --commit-filter '
     git commit-tree "$@";
   fi' HEAD
 ```
-*** Merge conflictss
+*** Merge conflicts
 14. To simply choose a specific side and ignore the other, pass the merge command either a `-Xours` or `-Xtheirs`.
 `git merge -Xours master`
+
+
+*** Useful builtin commands
+`git config --get-regex`
+`git config -e` (opens `.git/config` file by default)
