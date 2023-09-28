@@ -44,11 +44,12 @@ git filter-branch --commit-filter '
     git commit-tree "$@";
   fi' HEAD
 ```
-*** Merge conflicts
+
+### Merge conflicts
 14. To simply choose a specific side and ignore the other, pass the merge command either a `-Xours` or `-Xtheirs`.
 `git merge -Xours master`
+15. `git commit-tree -p master -m 'message' my_branch^{tree}` - creates a new commit object that implements the changes made in the `my_branch` branch, and sets the parent of the new commit to be the master branch
 
-
-*** Useful builtin commands
+### Useful builtin commands
 `git config --get-regex`
 `git config -e` (opens `.git/config` file by default)
