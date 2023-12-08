@@ -60,3 +60,6 @@ git filter-branch --commit-filter '
 To recover something in `git` we need to make it reachable again - e.g. make a new branch pointing to lost commit.
 1. Try `git reflog` or `git log -g` -> create branch from lost commit `git branch recover <your commit SHA-1>`
 2. If no useful data is found in `git reflog` try `git fsck` -> try restoring dangling commits
+
+### Git UI
+`gitk` - graphical history viewer. Ships with `git`
