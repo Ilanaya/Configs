@@ -38,7 +38,7 @@ git filter-branch --commit-filter '
   if [ "$GIT_AUTHOR_EMAIL" = "mycompany@email" ];
   then
     GIT_AUTHOR_NAME="Ilya Golovin";
-    GIT_AUTHOR_EMAIL="me@ilscc.ru";
+    GIT_AUTHOR_EMAIL="me@ilanaya.ru";
     git commit-tree "$@";
   else
     git commit-tree "$@";
