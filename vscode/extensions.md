@@ -12,7 +12,7 @@ echoapi.echoapi-for-vscode
 editorconfig.editorconfig
 hookyqr.jsdoctagcomplete
 ipatalas.vscode-postfix-ts
-jasonnutter.search-node-modules
+jasonnutter.search-node-modules;
 johnsoncodehk.vscode-tsconfig-helper
 maiiady.tc-extension
 mikestead.dotenv
