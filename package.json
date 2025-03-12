@@ -1,5 +1,5 @@
 {
-  "name": "maiiady-configs",
+  "name": "ilanaya-configs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maIIady/Configs.git"
+    "url": "git+https://github.com/ilanaya/Configs.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maIIady/Configs/issues"
+    "url": "https://github.com/ilanaya/Configs/issues"
   },
-  "homepage": "https://github.com/maIIady/Configs#readme",
+  "homepage": "https://github.com/ilanaya/Configs#readme",
   "dependencies": {
     "modify-json-file": "^1.2.2"
   },
